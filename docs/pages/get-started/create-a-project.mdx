@@ -1,24 +1,17 @@
----
-title: Create a project
-description: Learn how to create a new Expo project.
-hideTOC: true
----
+import React from "react";
+import { View, Text, Button, StyleSheet } from "react-native";
 
-import { Terminal } from '~/ui/components/Snippet';
+export default function App() {
+  return (
+    <View style={styles.container}>
+      <Text style={styles.title}>Welcome!</Text>
+      <Button title="Get Started" onPress={() => alert("Hello")} />
+    </View>
+  );
+}
 
-System requirements:
+const styles = StyleSheet.create({
+  container: { flex: 1, justifyContent: "center", alignItems: "center" },
+  title: { fontSize: 24, fontWeight: "bold", marginBottom: 20 },
+});
 
-- [Node.js (LTS)](https://nodejs.org/en/).
-- macOS, Windows (Powershell and [WSL 2](https://expo.fyi/wsl)), and Linux are supported.
-
-We recommend starting with the default project created by `create-expo-app`. The default project includes example code to help you get started.
-
-To create a new project, run the following command:
-
-<Terminal cmd={['$ npx create-expo-app@latest']} />
-
-> You can choose a different template by adding the [`--template` option](/more/create-expo/#--template).
-
-## Next step
-
-You have a project. Now it's time to set up your development environment so that you can start developing.
